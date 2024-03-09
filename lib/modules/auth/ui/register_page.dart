@@ -69,55 +69,51 @@ class _RegisterPageState extends State<RegisterPage> {
               SizedBox(
                 height: 30,
               ),
-              GestureDetector(
-                onTap: () {
+              ElevatedButton(
+                onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => HomePage()));
                 },
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  width: double.infinity,
-                  height: 65,
-                  // color: Colors.purple.shade800,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Войти',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Icon(
-                        Icons.navigate_next_sharp,
-                        color: Colors.white,
-                        size: 35,
-                      )
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Colors.purple.shade800),
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                    backgroundColor: Colors.purple.shade800,
+                    padding: EdgeInsets.all(10),
+                    fixedSize: Size(double.infinity, 65)),
+
+                // color: Colors.purple.shade800,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Войти',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Icon(
+                      Icons.navigate_next_sharp,
+                      color: Colors.white,
+                      size: 35,
+                    )
+                  ],
                 ),
+               
               ),
               SizedBox(
                 height: 28,
               ),
               Center(
                 child: InkWell(
-                  onTap: () {
-                    
-                  },
+                  onTap: () {},
                   child: Text(
                     'Забыли  пароль?',
                     style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      decorationColor: Colors.purple.shade800,
-                      color: Colors.purple.shade800,
-                      fontSize: 17,
-                      fontWeight: FontWeight.bold
-                    ),
+                        decoration: TextDecoration.underline,
+                        decorationColor: Colors.purple.shade800,
+                        color: Colors.purple.shade800,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
