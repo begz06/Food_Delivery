@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery2/modules/auth/ui/otp_page.dart';
 
-class LogInPage extends StatefulWidget {
-  const LogInPage({super.key});
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({super.key});
 
   @override
-  State<LogInPage> createState() => _LogInPageState();
+  State<SignUpPage> createState() => _SignUpPageState();
 }
 
-class _LogInPageState extends State<LogInPage> {
-   TextEditingController  _nomerController = TextEditingController();
+class _SignUpPageState extends State<SignUpPage> {
+  TextEditingController _nomerController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +22,7 @@ class _LogInPageState extends State<LogInPage> {
             children: [
               const Text(
                 "Номер телефона",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+                style: TextStyle(fontSize: 27, fontWeight: FontWeight.w800),
               ),
               const SizedBox(
                 height: 130,
@@ -48,22 +49,31 @@ class _LogInPageState extends State<LogInPage> {
                 ),
               ),
               const Spacer(),
-              ElevatedButton(
-                  child: const Center(
-                    child: Text(
-                      'Продолжить',
-                      style: TextStyle(
-                        color: Colors.white,
+              Padding(
+                padding: const EdgeInsets.only(top: 5, bottom: 5),
+                child: ElevatedButton(
+                    child: const Center(
+                      child: Text(
+                        'Продолжить',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(vertical: 20),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15)),
                       backgroundColor: Colors.purple.shade800,
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const OTPPAge()));
+                    }),
               ),
-                  onPressed: () {}),
             ],
           ),
         ),

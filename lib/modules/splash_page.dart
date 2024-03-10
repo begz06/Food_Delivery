@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery2/modules/auth/ui/log_in_page.dart';
+
 import 'package:food_delivery2/modules/auth/ui/register_page.dart';
 
 class SplashPage extends StatefulWidget {
@@ -13,11 +13,11 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 2)).then(
+    Future.delayed(const Duration(seconds: 2)).then(
       (value) => Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(
-            builder: (context) => RegisterPage(),
+            builder: (context) => const RegisterPage(),
           ),
           (route) => false),
     );
@@ -26,9 +26,35 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Icon(Icons.food_bank,size: 200,),
-      ),
+      body: Container(
+          width: double.infinity,
+          color: Colors.purple.shade400,
+          child: const Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                    
+                  "Food",
+                  style: TextStyle(
+                    fontSize: 50,
+                    color: Colors.yellowAccent,
+                    fontWeight: FontWeight.bold
+                    ),
+                ),
+               
+                Text(
+                  "Delivery",
+                  style: TextStyle(
+                    fontSize: 50,
+                    color: Colors.yellowAccent,
+                    fontWeight: FontWeight.bold
+                    ),
+                ),
+                 CircularProgressIndicator.adaptive(),
+              ],
+            ),
+          )),
     );
   }
 }
