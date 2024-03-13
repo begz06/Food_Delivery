@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class InputInfoPage extends StatefulWidget {
   const InputInfoPage({super.key});
 
@@ -43,6 +42,7 @@ class _InputInfoPageState extends State<InputInfoPage> {
                   controller: _infoUsername,
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
+                    hintText: 'Figmachini ismi bor ekan😂',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Colors.purple.shade800),
@@ -53,7 +53,7 @@ class _InputInfoPageState extends State<InputInfoPage> {
                   height: 5,
                 ),
                 const Text(
-                  "Пароль",
+                  "Дата рождения",
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 17,
@@ -64,31 +64,9 @@ class _InputInfoPageState extends State<InputInfoPage> {
                 ),
                 TextFormField(
                   controller: _infoPassword,
-                  keyboardType: TextInputType.text,
+                  keyboardType: TextInputType.datetime,
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: BorderSide(color: Colors.purple.shade800),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                const Text(
-                  "Подтвердите пароль",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 17,
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                TextFormField(
-                  controller: _infoPassword,
-                  keyboardType: TextInputType.text,
-                  decoration: InputDecoration(
+                    hintText: 'Введите дату рождения',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Colors.purple.shade800),

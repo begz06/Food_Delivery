@@ -37,6 +37,7 @@ class _OTPPAgeState extends State<OTPPAge> {
                     width: 54,
                     height: 58,
                     child: TextFormField(
+                      showCursor: false,
                       // validator: (valname) => valname!.lenght <6?"Код ошибки",
                       onChanged: (value) {
                         if (value.length == 1) {
@@ -45,6 +46,7 @@ class _OTPPAgeState extends State<OTPPAge> {
                       },
                       onSaved: (pin1) {},
                       decoration: InputDecoration(
+                        
                           hintText: "0",
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(15),
@@ -63,6 +65,7 @@ class _OTPPAgeState extends State<OTPPAge> {
                     width: 54,
                     height: 58,
                     child: TextFormField(
+                       showCursor: false,
                       onChanged: (value) {
                         if (value.length == 1) {
                           FocusScope.of(context).nextFocus();
@@ -88,6 +91,7 @@ class _OTPPAgeState extends State<OTPPAge> {
                     width: 54,
                     height: 58,
                     child: TextFormField(
+                       showCursor: false,
                       onChanged: (value) {
                         if (value.length == 1) {
                           FocusScope.of(context).nextFocus();
@@ -113,6 +117,7 @@ class _OTPPAgeState extends State<OTPPAge> {
                     width: 54,
                     height: 58,
                     child: TextFormField(
+                       showCursor: false,
                       onChanged: (value) {
                         if (value.length == 1) {
                           FocusScope.of(context).nextFocus();
@@ -138,6 +143,7 @@ class _OTPPAgeState extends State<OTPPAge> {
                     width: 54,
                     height: 58,
                     child: TextFormField(
+                       showCursor: false,
                       onChanged: (value) {
                         if (value.length == 1) {
                           FocusScope.of(context).nextFocus();
@@ -163,6 +169,7 @@ class _OTPPAgeState extends State<OTPPAge> {
                     width: 54,
                     height: 58,
                     child: TextFormField(
+                       showCursor: false,
                       onChanged: (value) {
                         if (value.length == 1) {
                           FocusScope.of(context).nextFocus();
